@@ -48,8 +48,5 @@ Durante el desarrollo fui guiando la creación y mejora del código mediante est
    - **Lo que pedí:** *"Separa todos los estilos en un archivo styles.css con colores verdes agrícolas, tarjetas con sombra suave y dos columnas (formulario a la izquierda y tabla a la derecha) que se adapten bien en celular."*
    - **Para qué me sirvió:** Para dejar el código ordenado en archivos separados (`index.html`, `styles.css` y `app.js`) y darle una apariencia limpia y personalizada.
 
-## Video explicativo
-- **Enlace al video:** [Pega aquí el enlace de YouTube o Google Drive donde subas tu video]
-
 ## Autor
 - **Alejandro Camacho Pastrana** — Estudiante de Ingeniería de Software (FET)
