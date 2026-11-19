@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgroCampo Huila — Gestión de Inventario CRUD</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1>AgroCampo Huila</h1>
+      <p>Sistema de Gestión de Insumos Agrícolas (CRUD con JavaScript y localStorage)</p>
+    </div>
+  </header>
+
+  <main class="container main-grid">
+    <!-- Sección CREATE / UPDATE: Formulario de registro y edición -->
+    <section class="card form-section">
+      <h2 id="form-title">Registrar Nuevo Insumo</h2>
+      <form id="product-form" autocomplete="off">
+        <!-- Campo oculto para almacenar el ID cuando se está editando -->
+        <input type="hidden" id="product-id" />
+
+        <div class="form-group">
+          <label for="nombre">Nombre del insumo *</label>
+          <input type="text" id="nombre" placeholder="Ej: Fertilizante Triple 15 (50 kg)" required />
+        </div>
+
+        <div class="form-group">
+          <label for="categoria">Categoría *</label>
+          <select id="categoria" required>
+            <option value="">Seleccione una categoría...</option>
+            <option value="Fertilizantes">Fertilizantes</option>
+            <option value="Semillas">Semillas</option>
+            <option value="Control de Plagas">Control de Plagas</option>
+            <option value="Herramientas">Herramientas</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cantidad">Cantidad (unidades) *</label>
+            <input type="number" id="cantidad" min="1" placeholder="Ej: 25" required />
+          </div>
+
+          <div class="form-group">
+            <label for="precio">Precio unitario (COP) *</label>
+            <input type="number" id="precio" min="100" step="100" placeholder="Ej: 85000" required />
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" id="btn-submit" class="btn btn-primary">Guardar Insumo</button>
+          <button type="button" id="btn-cancel" class="btn btn-secondary hidden">Cancelar Edición</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Sección READ / DELETE: Listado, búsqueda y acciones -->
+    <section class="card list-section">
+      <div class="list-header">
+        <h2>Inventario Actual (<span id="total-items">0</span>)</h2>
+        <input type="text" id="search-input" placeholder="Buscar por nombre o categoría..." />
+      </div>
+
+      <!-- Mensaje de alerta visual para retroalimentación al usuario -->
+      <div id="alert-box" class="alert hidden"></div>
+
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Insumo</th>
+              <th>Categoría</th>
+              <th>Stock</th>
+              <th>Precio Unit.</th>
+              <th>Subtotal</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="product-table-body">
+            <!-- Los registros se renderizan dinámicamente desde app.js -->
+          </tbody>
+        </table>
+      </div>
+      <p id="empty-message" class="empty-state">No hay insumos registrados en el inventario.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Desarrollado por Alejandro Camacho Pastrana — Seminario Gestión de Software Ágil asistido por IA</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
