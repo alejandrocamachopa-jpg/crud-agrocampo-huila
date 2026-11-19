@@ -24,8 +24,7 @@ Todos los datos se guardan directamente en el navegador usando `localStorage`, a
 4. Ya puedes empezar a registrar, buscar, editar y eliminar insumos.
 
 ## Capturas de pantalla
-*(Nota: Una vez subas tus dos capturas de pantalla a una carpeta llamada `capturas` en GitHub, descomenta o actualiza estas líneas)*
-- Vista general del sistema y registro de insumos: `capturas/pantalla1.png`
+https://github.com/alejandrocamachopa-jpg/crud-agrocampo-huila/blob/main/Capturas/Captura%20de%20pantalla%202026-11-19%20142428.png
 - Edición y listado de inventario funcionando: `capturas/pantalla2.png`
 
 ## Lista de prompts utilizados y explicación
